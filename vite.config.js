@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 import dotenv from 'dotenv';
 import { defineConfig } from 'vite';
 import EnvironmentPlugin from 'vite-plugin-environment';
+import vercel from 'vite-plugin-vercel';
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ export default defineConfig({
     EnvironmentPlugin('all', { prefix: 'DFX_' }),
     EnvironmentPlugin({ LEDGER_HOST: 'ic0.app', BACKEND_CANISTER_ID: '' }),
     svgr(),
+    vercel(),
     react({
       jsxImportSource: '@emotion/react',
       babel: {
