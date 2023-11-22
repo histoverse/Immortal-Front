@@ -2,13 +2,13 @@ import { PropsWithChildren } from 'react';
 import { Theme } from '@emotion/react';
 
 import { styles } from './Typography.styled';
-import { FontFamilyTypes, FontWeights, TypographyColors, TypographyVariants } from './Typography.types';
+import { FontFamily, FontWeights, TypographyColors, TypographyVariants } from './Typography.types';
 
 interface TypographyProps {
   variant?: TypographyVariants;
   color?: TypographyColors;
   weight?: FontWeights;
-  family?: FontFamilyTypes;
+  fontFamily?: FontFamily;
   style?: Theme;
   align?: 'auto' | 'left' | 'right' | 'center';
 }
@@ -16,7 +16,7 @@ interface TypographyProps {
 export const Typography = ({
   variant = 'label',
   color = 'black',
-  family = 'Inter',
+  fontFamily = FontFamily.Inter,
   weight,
   children,
   style,
@@ -27,10 +27,12 @@ export const Typography = ({
     <p
       {...textProps}
       css={{
-        ...styles.font[family],
+        ...styles.font[fontFamily],
         ...styles[color],
         ...styles[variant],
         ...(align && { textAlign: align }),
+        ...(weight && { fontWeight: weight }),
+        ...style,
       }}
     >
       {children}

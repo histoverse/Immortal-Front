@@ -1,4 +1,4 @@
-import { COLOR_BLCK, COLOR_WH } from '../../styles/colors';
+import { COLOR_BLACK, COLOR_GRAY, COLOR_WHITE } from '../../styles';
 
 import { FontFamily, FontWeights } from './Typography.types';
 
@@ -7,55 +7,50 @@ export const styles = {
     [FontFamily.Inter]: {
       fontFamily: FontFamily.Inter,
     },
-    [FontFamily.Poppins]: {
-      fontFamily: FontFamily.Poppins,
-    },
-    [FontFamily.PPMori]: {
-      fontFamily: FontFamily.PPMori,
+    [FontFamily.Cinzel]: {
+      fontFamily: FontFamily.Cinzel,
     },
   },
   h1: {
-    fontWeight: FontWeights.SemiBold,
-    fontSize: 48,
-    lineHeight: '54px',
+    fontFamily: FontFamily.Cinzel,
+    fontWeight: FontWeights.Bold,
+    fontSize: 39.142,
+    lineHeight: '132.5%',
+    letterSpacing: '-0.391px',
+    textTransform: 'uppercase',
   },
-  h2: {
-    fontWeight: FontWeights.Regular,
-    fontSize: 36,
-    lineHeight: '40px',
-  },
-  subtitle1: {
+  subtitle: {
     fontWeight: FontWeights.Regular,
     fontSize: 24,
-    lineHeight: '28px',
+    lineHeight: '132.5%',
+    letterSpacing: '-0.24px',
+    textTransform: 'uppercase',
   },
   body: {
     fontWeight: FontWeights.Regular,
     fontSize: 20,
-    lineHeight: '29px',
-  },
-  subtitle2: {
-    fontWeight: FontWeights.Regular,
-    fontSize: 16,
-    lineHeight: '22px',
+    lineHeight: '132.5%',
   },
   label: {
-    fontWeight: FontWeights.Medium,
-    fontSize: 14,
-    lineHeight: '16px',
+    fontWeight: FontWeights.Regular,
+    fontSize: 18,
+    lineHeight: '132.5%',
   },
   button: {
-    fontFamily: FontFamily.Poppins,
-    fontWeight: FontWeights.Medium,
-    fontSize: 18,
-    lineHeight: '20px',
+    fontWeight: FontWeights.Bold,
+    fontSize: 14.326,
+    lineHeight: '132.5%',
     textTransform: 'uppercase',
+    letterSpacing: '-0.143px',
   },
   white: {
-    color: COLOR_WH,
+    color: COLOR_WHITE,
   },
   black: {
-    color: COLOR_BLCK,
+    color: COLOR_BLACK,
+  },
+  gray: {
+    color: COLOR_GRAY,
   },
   transparent: {
     color: 'transparent',

@@ -13,7 +13,7 @@ interface IIconProps {
   sx?: Theme;
 }
 
-export const Icon: FC<IIconProps> = ({ type, width = 24, height = 24, color, sx }) => {
+export const Icon: FC<IIconProps> = ({ type, width, height, color, sx }) => {
   const IconComponent = icons[type];
 
   return <IconComponent width={width} height={height} style={{ color, minWidth: width, ...sx }} />;

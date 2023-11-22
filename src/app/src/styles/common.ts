@@ -1,6 +1,8 @@
-export const RADIUS_XXL = '155px';
-export const RADIUS_XS = '15px';
-export const RADIUS_XL = '80px';
-export const RADIUS_L = '71px';
-export const RADIUS_M = '40px';
-export const RADIUS_S = '10px';
+export const RADIUS_FULL = '50%';
+export const RADIUS_XL = '28px';
+export const RADIUS_L = '24px';
+export const RADIUS_M = '16px';
+export const RADIUS_S = '11px';
+export const RADIUS_XS = '8px';
+
+export const TRANSITION_DEFAULT = '0.5s';

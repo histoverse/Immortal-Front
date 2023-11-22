@@ -14,17 +14,11 @@ type JustifyContent =
 type AlignItems = 'center' | 'start' | 'end' | 'flex-start' | 'flex-end' | 'baseline' | 'stretch';
 type FlexDirection = 'column' | 'row' | 'column-reverse' | 'row-reverse';
 
-export type FlexProps = {
-  justifyContent?: JustifyContent;
-  alignItems?: AlignItems;
-  flexDirection?: FlexDirection;
-};
-
-export const flexHelper = ({
-  justifyContent = 'flex-start',
-  alignItems = 'flex-start',
-  flexDirection = 'row',
-}: FlexProps) => ({
+export const flexHelper = (
+  justifyContent: JustifyContent = 'flex-start',
+  alignItems: AlignItems = 'flex-start',
+  flexDirection: FlexDirection = 'row',
+) => ({
   display: 'flex',
   justifyContent,
   alignItems,

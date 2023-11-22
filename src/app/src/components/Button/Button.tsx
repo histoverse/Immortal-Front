@@ -8,7 +8,7 @@ import { ButtonStyled, LinkButton } from './Button.styled';
 
 export type ButtonProps = {
   type?: ButtonHTMLAttributes<any>['type'];
-  variant: 'primary' | 'secondary' | 'icon';
+  variant?: 'primary' | 'secondary' | 'icon';
   onClick?: (event: any) => void;
   iconImg?: ReactElement;
   loading?: boolean;
@@ -25,7 +25,7 @@ export const Button: FC<ButtonProps> = ({
   href,
   size,
   disabled = false,
-  variant,
+  variant = 'primary',
   loading,
   onClick,
   text,
@@ -35,10 +35,11 @@ export const Button: FC<ButtonProps> = ({
     return (
       <LinkButton href={href} target="_blank" rel="noreferrer" css={{ ...sx }}>
         {text && (
-          <Typography variant="subtitle2" family="Poppins" color="black">
+          <Typography variant="label" color="white">
             {text}
           </Typography>
         )}
+        {iconImg && iconImg}
       </LinkButton>
     );
   }
@@ -50,11 +51,10 @@ export const Button: FC<ButtonProps> = ({
       ) : (
         <>
           {text && (
-            <Typography variant="button" family="Poppins" color="white">
+            <Typography variant="button" color="black">
               {text}
             </Typography>
           )}
-
           {iconImg && iconImg}
         </>
       )}

@@ -3,8 +3,9 @@ export const routes = {
     root: '/',
     title: '',
   },
-  lessons: {
-    root: '/lessons',
+  lesson: {
+    root: '/lessons/:id',
+    getPath: (id: number) => `/lessons/${id}`,
     title: '',
   },
 };

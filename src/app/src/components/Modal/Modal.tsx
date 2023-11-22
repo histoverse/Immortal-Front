@@ -1,6 +1,8 @@
 import { FC, PropsWithChildren } from 'react';
 import Dialog from 'rc-dialog';
 
+import { COLOR_WHITE, RADIUS_L } from '../../styles';
+
 import s from './Modal.scss';
 
 export interface ModalProps {
@@ -20,8 +22,10 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({ visible, onClose, chi
       classNames={{ wrapper: s }}
       style={{
         position: 'relative',
-        borderRadius: '20px',
-        padding: 23,
+        borderRadius: RADIUS_L,
+        width: 408,
+        padding: '20px 28px 39px',
+        background: COLOR_WHITE,
       }}
     >
       {children}
