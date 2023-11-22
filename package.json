@@ -74,5 +74,5 @@
     "last 2 safari version",
     "last 2 edge version"
   ],
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@4.0.2"
 }
