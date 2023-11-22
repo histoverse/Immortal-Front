@@ -1,0 +1,15 @@
+default:
+  image: node:16.20.2
+
+  services:
+    - docker:dind
+
+deploy:
+  stage: deploy
+  variables:
+    NODE_OPTIONS: --max_old_space_size=3584
+  script:
+    - npm install --global vercel
+    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+    - vercel build --prod --token=$VERCEL_TOKEN
+    - vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
