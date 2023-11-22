@@ -1,6 +1,9 @@
 default:
   image: node:16.20.2
 
+  services:
+    - docker:dind
+
 deploy:
   stage: deploy
   variables:
